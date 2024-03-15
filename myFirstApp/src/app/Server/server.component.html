@@ -1,0 +1,33 @@
+
+<!-- String Interpolation -->
+<h1>This is the server Component created by {{Name}}</h1>
+
+
+<!-- String Interpolation by method-->
+<h1>This is the server Component created by {{getSurName()}}</h1>
+
+<!-- Loading Component within a component -->
+<app-server2></app-server2>
+
+<!-- Property Binding -->
+<button class="btn btn-primary" [disabled] = "enabled">Add Me</button>
+
+<br>
+<br>
+
+<hr>
+<!-- CLiek event -->
+<button class="btn btn-primary" (click)="onServerCreate()">Add Server</button>
+
+<p>{{serverText}}</p>
+
+
+<br>
+<hr>
+<!-- Two way data binding, always need forms module imported-->
+<input type="text" [(ngModel)] = "serverText">
+
+<br>
+<hr>
+<!-- ng If Directive -->
+<p *ngIf="displayMessage">Display P Message</p>
